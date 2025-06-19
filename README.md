@@ -1,10 +1,6 @@
 # Synonyms: Fast Semantic Similarity Engine
 
-**License:** MIT  
-**CI:** GitHub Actions enabled  
-**Coverage:** 100%
-
-## 1. Project blurb
+## 1. WHAT IS THIS PROJECT?
 A blazing-fast, pluggable engine for computing semantic similarity between words using vector-space models.
 
 ## 2. Key features
