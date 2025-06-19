@@ -1,10 +1,6 @@
 # Synonyms: Fast Semantic Similarity Engine
 
-**License:** MIT  
-**CI:** GitHub Actions enabled  
-**Coverage:** 100%
-
-## 1. Project blurb
+## 1. WHAT IS THIS PROJECT? 
 A blazing-fast, pluggable engine for computing semantic similarity between words using vector-space models.
 
 ## 2. Key features
@@ -27,16 +23,47 @@ test_score = run_similarity_test("test_questions.txt", descriptors, cosine_simil
 print(f"Test accuracy: {test_score:.1f}%")
 ```
 
-## 4. Benchmarks / Results
+## 4. How to test this project
+
+1. **Set up your environment**
+   - (Recommended) Create and activate a virtual environment:
+     ```bash
+     python -m venv venv
+     source venv/bin/activate  # On Windows: venv\Scripts\activate
+     ```
+2. **Install development dependencies**
+   ```bash
+   pip install pytest pytest-cov black ruff
+   ```
+3. **Run the tests**
+   ```bash
+   pytest --cov=src --cov-report=term-missing
+   ```
+   - This runs all tests and shows a coverage report.
+4. **Lint and format your code**
+   - Check formatting:
+     ```bash
+     black --check src tests
+     ```
+   - Lint with Ruff:
+     ```bash
+     ruff src tests
+     ```
+5. **(Optional) Enable pre-commit hooks**
+   ```bash
+   pip install pre-commit
+   pre-commit install
+   ```
+   - This will auto-run Black and Ruff before every commit.
+6. **Check CI on GitHub**
+   - Every push or pull request will run tests and linters automatically via GitHub Actions.
+
+## 5. Benchmarks / Results
 - On the supplied TOEFL-style test set, this engine achieves **~76% accuracy** (rerun with your own corpus for best results).
 - Robust to missing words and empty vectors (returns 0.0 similarity).
 
-## 5. Roadmap & contribution guidelines
+## 6. Roadmap & contribution guidelines
 - Planned: more similarity functions, phrase-level descriptors, and web API.
 - Contributions welcome! Please open issues or PRs for bugs, features, or docs.
 - Run `pre-commit install` after cloning to enable auto-formatting and linting.
 
-## 6. Badges
-- License: MIT
-- CI: GitHub Actions enabled
-- Coverage: 100% 
